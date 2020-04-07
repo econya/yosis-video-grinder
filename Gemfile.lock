@@ -9,7 +9,7 @@ GEM
   specs:
     minitest (5.14.0)
     multi_json (1.14.1)
-    rake (10.5.0)
+    rake (13.0.1)
     streamio-ffmpeg (3.0.2)
       multi_json (~> 1.8)
 
@@ -19,7 +19,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   minitest (~> 5.0)
-  rake (~> 10.0)
+  rake (~> 13.0)
   yosis-video_grinder!
 
 BUNDLED WITH
