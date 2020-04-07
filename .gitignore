@@ -7,3 +7,7 @@
 /spec/reports/
 /tmp/
 *.swp
+*.ac3
+*.aac
+*.wav
+*.mp4
