@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+# SPDX-FileCopyrightText: 2020 Felix Wolfsteller
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+require "yosis/video_grinder"
+require "streamio-ffmpeg"
+
+source_file = ARGV[0]
+
+if !source_file || !File.exist?(source_file)
+  STDERR.puts "need source file"
+  exit 1
+end
+
+basename = File.basename(source_file, '.*')
+
+source = FFMPEG::Movie.new(source_file)
+audio_codec = source.audio_codec
+
+target_file_audio = basename + ".#{audio_codec}"
+
+source.transcode(target_file_audio) {|progress| puts progress}
+
+puts "Audio extracted to %s" % target_file_audio
+
+exec "audacity %s" % target_file_audio
+
+# graceful
+exit 0

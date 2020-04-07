@@ -40,6 +40,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/econya
 The code is released under the AGPLv3+ and Copyright 2020 Felix Wolfsteller.
 Contributions are assumed to include copyright transfer to Felix Wolfsteller.
 Get in touch if there is need for discussion about that.
+Some of the files include [FSFEs reuse](https://reuse.software) compliant
+headers.
 
 ## Code of Conduct
 
